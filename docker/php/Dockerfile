@@ -11,7 +11,9 @@ RUN apk add -U --no-cache \
     libzip-dev \
     unzip \
     gmp-dev \
-    oniguruma-dev
+    oniguruma-dev \
+    sqlite-libs \
+    sqlite-dev
 RUN docker-php-ext-install pdo_mysql mysqli mbstring
 RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer
